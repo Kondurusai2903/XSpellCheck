@@ -16,7 +16,7 @@ function App() {
     console.log(result, "this is the splitted value");
     for (let i = 0; i < result.length; i++) {
       if (customDictionary[result[i].toLowerCase()]) {
-        return result[i];
+        return customDictionary[result[i]];
       }
     }
     return "";
@@ -41,13 +41,7 @@ function App() {
           onChange={(e) => setInput(e.target.value)}
         ></textarea>
       </div>
-      {val ? (
-        <p>
-          Did you mean: <bold>{val}</bold>?
-        </p>
-      ) : (
-        <p> </p>
-      )}
+      {val ? <p>Did you mean: {val}?</p> : ""}
     </div>
   );
 }
