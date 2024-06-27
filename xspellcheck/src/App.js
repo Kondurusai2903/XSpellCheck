@@ -13,17 +13,17 @@ function App() {
   };
   function res(input, customDictionary) {
     let result = input.split(" ");
-    console.log(result, "this is the splitted value");
+    // console.log(result, "this is the splitted value");
     for (let i = 0; i < result.length; i++) {
       if (customDictionary[result[i].toLowerCase()]) {
-        return customDictionary[result[i]];
+        return customDictionary[result[i].toLowerCase()];
       }
     }
     return "";
   }
   useEffect(() => {
     let result = res(input, customDictionary);
-    console.log(result, "this is the returned value");
+    // console.log(result, "this is the returned value");
     setVal(result);
   }, [input]);
 
