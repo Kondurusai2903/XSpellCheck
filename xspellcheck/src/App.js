@@ -43,7 +43,7 @@ function App() {
       </div>
       {val ? (
         <p>
-          Did you mean:<bold>{val}</bold>?
+          Did you mean: <bold>{val}</bold>?
         </p>
       ) : (
         <p> </p>
